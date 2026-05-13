@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customers – Brewer's Cafe IMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="sidebar-mount"></div>
+<main class="main">
+  <div id="topbar-mount"></div>
+  <div class="content">
+
+    <div class="metrics-row">
+      <div class="metric-card"><div class="metric-label">Total Customers</div><div class="metric-value">1,284</div><div class="metric-sub"><span class="badge-up">↑ 28</span> this week</div></div>
+      <div class="metric-card"><div class="metric-label">Loyalty Members</div><div class="metric-value">412</div><div class="metric-sub">32% of base</div></div>
+      <div class="metric-card"><div class="metric-label">Repeat Rate</div><div class="metric-value">48%</div><div class="metric-sub">Last 30 days</div></div>
+      <div class="metric-card"><div class="metric-label">Avg. Spend</div><div class="metric-value">₱195</div><div class="metric-sub">Per visit</div></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>All Customers</h3>
+        <div class="tab-row"><div class="tab active">All</div><div class="tab">Loyalty</div><div class="tab">VIP</div><div class="tab">New</div></div>
+        <button class="btn btn-ghost">Export CSV</button>
+      </div>
+      <table class="data-table">
+        <thead><tr><th>Name</th><th>Email</th><th>Tier</th><th>Visits</th><th>Total Spend</th><th>Last Visit</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><div class="cust-row"><div class="cust-avatar">MS</div><div><div class="item-name">Maria Santos</div><div class="item-sub">+63 917 100 1234</div></div></div></td><td style="color:#aaa;">maria@mail.com</td><td><span class="tag tag-active">VIP</span></td><td>52</td><td style="font-weight:600;">₱12,840</td><td style="color:#aaa;">Today</td><td><span class="status-pill status-done"><span class="dot"></span>Active</span></td></tr>
+          <tr><td><div class="cust-row"><div class="cust-avatar">JR</div><div><div class="item-name">Jose Reyes</div><div class="item-sub">+63 917 100 5512</div></div></div></td><td style="color:#aaa;">jose.r@mail.com</td><td><span class="tag tag-active">Gold</span></td><td>38</td><td style="font-weight:600;">₱8,210</td><td style="color:#aaa;">Today</td><td><span class="status-pill status-done"><span class="dot"></span>Active</span></td></tr>
+          <tr><td><div class="cust-row"><div class="cust-avatar">AC</div><div><div class="item-name">Ana Cruz</div><div class="item-sub">+63 917 100 7723</div></div></div></td><td style="color:#aaa;">anac@mail.com</td><td><span class="tag tag-pending">Silver</span></td><td>21</td><td style="font-weight:600;">₱4,930</td><td style="color:#aaa;">Yesterday</td><td><span class="status-pill status-done"><span class="dot"></span>Active</span></td></tr>
+          <tr><td><div class="cust-row"><div class="cust-avatar">KT</div><div><div class="item-name">Karen Tan</div><div class="item-sub">+63 917 100 8841</div></div></div></td><td style="color:#aaa;">karen.t@mail.com</td><td><span class="tag tag-pending">Silver</span></td><td>18</td><td style="font-weight:600;">₱3,840</td><td style="color:#aaa;">2 days ago</td><td><span class="status-pill status-done"><span class="dot"></span>Active</span></td></tr>
+          <tr><td><div class="cust-row"><div class="cust-avatar">LP</div><div><div class="item-name">Liza Park</div><div class="item-sub">+63 917 100 1199</div></div></div></td><td style="color:#aaa;">lizap@mail.com</td><td><span class="tag tag-active">Gold</span></td><td>34</td><td style="font-weight:600;">₱7,420</td><td style="color:#aaa;">3 days ago</td><td><span class="status-pill status-done"><span class="dot"></span>Active</span></td></tr>
+          <tr><td><div class="cust-row"><div class="cust-avatar">BK</div><div><div class="item-name">Ben Kim</div><div class="item-sub">+63 917 100 4477</div></div></div></td><td style="color:#aaa;">benk@mail.com</td><td><span class="tag tag-inactive">Basic</span></td><td>4</td><td style="font-weight:600;">₱720</td><td style="color:#aaa;">May 8</td><td><span class="status-pill status-new"><span class="dot"></span>New</span></td></tr>
+          <tr><td><div class="cust-row"><div class="cust-avatar">RM</div><div><div class="item-name">Rafa Mendoza</div><div class="item-sub">+63 917 100 6655</div></div></div></td><td style="color:#aaa;">rafa.m@mail.com</td><td><span class="tag tag-pending">Silver</span></td><td>12</td><td style="font-weight:600;">₱2,140</td><td style="color:#aaa;">May 6</td><td><span class="status-pill status-done"><span class="dot"></span>Active</span></td></tr>
+          <tr><td><div class="cust-row"><div class="cust-avatar">TV</div><div><div class="item-name">Tina Villanueva</div><div class="item-sub">+63 917 100 3322</div></div></div></td><td style="color:#aaa;">tinav@mail.com</td><td><span class="tag tag-inactive">Basic</span></td><td>2</td><td style="font-weight:600;">₱340</td><td style="color:#aaa;">May 2</td><td><span class="status-pill status-new"><span class="dot"></span>New</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</main>
+<script src="app.js"></script>
+<script>mountLayout({ active: 'customers', title: 'Customers', cta: 'Add Customer' });</script>
+</body>
+</html>

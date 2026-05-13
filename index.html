@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard – Brewer's Cafe IMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="sidebar-mount"></div>
+<main class="main">
+  <div id="topbar-mount"></div>
+  <div class="content">
+
+    <div class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-label">Orders Today</div>
+        <div class="metric-value">148</div>
+        <div class="metric-sub"><span class="badge-up">↑ 12%</span> vs yesterday</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Revenue</div>
+        <div class="metric-value">₱18,340</div>
+        <div class="metric-sub"><span class="badge-up">↑ 8%</span> vs yesterday</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Low Stock Items</div>
+        <div class="metric-value">3</div>
+        <div class="metric-sub"><span class="badge-down">↑ 2</span> from yesterday</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Open Complaints</div>
+        <div class="metric-value">5</div>
+        <div class="metric-sub">avg resolve <span style="color:var(--mint); font-weight:600;">3.2 hrs</span></div>
+      </div>
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi-card kpi-ok"><div class="kpi-name">Fulfillment Rate</div><div class="kpi-val">97.3%</div><div class="kpi-target">Target: > 95%</div></div>
+      <div class="kpi-card kpi-ok"><div class="kpi-name">Stock Validation</div><div class="kpi-val">2.8s</div><div class="kpi-target">Target: < 5s</div></div>
+      <div class="kpi-card kpi-ok"><div class="kpi-name">Complaint Resolution</div><div class="kpi-val">3.2 hrs</div><div class="kpi-target">Target: < 24 hrs</div></div>
+      <div class="kpi-card kpi-warn"><div class="kpi-name">Menu Stockout Rate</div><div class="kpi-val">4.1%</div><div class="kpi-target">Target: < 5%</div></div>
+      <div class="kpi-card kpi-ok"><div class="kpi-name">Ingredient Waste</div><div class="kpi-val">1.8%</div><div class="kpi-target">Target: < 3%</div></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Recent Orders</h3>
+          <div class="tab-row"><div class="tab active">All</div><div class="tab">Pending</div><div class="tab">Done</div></div>
+          <span class="view-all">View all →</span>
+        </div>
+        <table class="data-table">
+          <thead><tr><th>Order ID</th><th>Item</th><th>Barista</th><th>Status</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td><div class="order-id">#ORD-0148</div></td><td><div class="item-name">Caramel Macchiato</div><div class="item-sub">Oat milk · Large</div></td><td style="color:#aaa;">Julia D.</td><td><span class="status-pill status-prep"><span class="dot"></span>Preparing</span></td><td style="font-weight:600;">₱185</td></tr>
+            <tr><td><div class="order-id">#ORD-0147</div></td><td><div class="item-name">Cold Brew + Muffin</div><div class="item-sub">Blueberry · Set</div></td><td style="color:#aaa;">Mark L.</td><td><span class="status-pill status-done"><span class="dot"></span>Served</span></td><td style="font-weight:600;">₱230</td></tr>
+            <tr><td><div class="order-id">#ORD-0146</div></td><td><div class="item-name">Matcha Latte</div><div class="item-sub">Whole milk · Medium</div></td><td style="color:#aaa;">Rich M.</td><td><span class="status-pill status-cancel"><span class="dot"></span>Cancelled</span></td><td style="font-weight:600; color:#bbb;">₱155</td></tr>
+            <tr><td><div class="order-id">#ORD-0145</div></td><td><div class="item-name">Espresso Shot ×2</div><div class="item-sub">Black · Double</div></td><td style="color:#aaa;">Nikky S.</td><td><span class="status-pill status-done"><span class="dot"></span>Served</span></td><td style="font-weight:600;">₱110</td></tr>
+            <tr><td><div class="order-id">#ORD-0144</div></td><td><div class="item-name">Iced Americano</div><div class="item-sub">No sugar · Large</div></td><td style="color:#aaa;">Arlo A.</td><td><span class="status-pill status-new"><span class="dot"></span>New</span></td><td style="font-weight:600;">₱145</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Ingredient Stock</h3>
+          <button class="btn btn-ghost" style="font-size:12px; padding:5px 10px;">Restock</button>
+          <span class="view-all">View all →</span>
+        </div>
+        <div class="stock-list">
+          <div class="stock-item"><div class="stock-icon" style="background:#FFF8F0;">☕</div><div class="stock-info"><div class="stock-name">Arabica Coffee Beans</div><div class="stock-unit">3.2 kg remaining</div></div><div class="stock-bar-wrap"><div class="stock-bar-bg"><div class="stock-bar-fill bar-ok" style="width:72%"></div></div><div class="stock-pct">72%</div></div><span class="stock-alert alert-ok">OK</span></div>
+          <div class="stock-item"><div class="stock-icon" style="background:#F0F8FF;">🥛</div><div class="stock-info"><div class="stock-name">Whole Milk</div><div class="stock-unit">4.8 L remaining</div></div><div class="stock-bar-wrap"><div class="stock-bar-bg"><div class="stock-bar-fill bar-ok" style="width:64%"></div></div><div class="stock-pct">64%</div></div><span class="stock-alert alert-ok">OK</span></div>
+          <div class="stock-item"><div class="stock-icon" style="background:#FFFBF0;">🌾</div><div class="stock-info"><div class="stock-name">Oat Milk</div><div class="stock-unit">0.9 L remaining</div></div><div class="stock-bar-wrap"><div class="stock-bar-bg"><div class="stock-bar-fill bar-warn" style="width:18%"></div></div><div class="stock-pct">18%</div></div><span class="stock-alert alert-warn">Low</span></div>
+          <div class="stock-item"><div class="stock-icon" style="background:#F5FFF5;">🍵</div><div class="stock-info"><div class="stock-name">Matcha Powder</div><div class="stock-unit">120 g remaining</div></div><div class="stock-bar-wrap"><div class="stock-bar-bg"><div class="stock-bar-fill bar-critical" style="width:9%"></div></div><div class="stock-pct">9%</div></div><span class="stock-alert alert-low">Critical</span></div>
+          <div class="stock-item"><div class="stock-icon" style="background:#FFF5F5;">🍯</div><div class="stock-info"><div class="stock-name">Caramel Syrup</div><div class="stock-unit">1.2 L remaining</div></div><div class="stock-bar-wrap"><div class="stock-bar-bg"><div class="stock-bar-fill bar-warn" style="width:30%"></div></div><div class="stock-pct">30%</div></div><span class="stock-alert alert-warn">Low</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="panel">
+        <div class="panel-head"><h3>Open Complaints</h3><span class="view-all">View all →</span></div>
+        <div class="complaint-list">
+          <div class="complaint-item"><div class="complaint-top"><span class="complaint-customer">Maria Santos</span><span class="complaint-time">10:42 AM</span></div><div class="complaint-text">Ordered oat milk latte but received whole milk. Allergic to dairy — requested immediate remake.</div><div class="complaint-footer"><span class="priority-tag p-high">HIGH</span><button class="resolve-btn">Mark Resolved →</button></div></div>
+          <div class="complaint-item"><div class="complaint-top"><span class="complaint-customer">Jose Reyes</span><span class="complaint-time">9:15 AM</span></div><div class="complaint-text">Cold brew was not cold enough; ice melted before reaching the table.</div><div class="complaint-footer"><span class="priority-tag p-med">MEDIUM</span><button class="resolve-btn">Mark Resolved →</button></div></div>
+          <div class="complaint-item"><div class="complaint-top"><span class="complaint-customer">Ana Cruz</span><span class="complaint-time">8:30 AM</span></div><div class="complaint-text">Matcha latte unavailable after ordering — no prior notification on menu.</div><div class="complaint-footer"><span class="priority-tag p-low">LOW</span><button class="resolve-btn">Mark Resolved →</button></div></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Hourly Orders</h3><span style="font-size:11px; color:#bbb;">Today</span></div>
+        <div class="mini-chart">
+          <div class="bar-col"><div class="bar-rect" style="height:30%; opacity:0.5;"></div><div class="bar-lbl">7A</div></div>
+          <div class="bar-col"><div class="bar-rect" style="height:60%;"></div><div class="bar-lbl">8A</div></div>
+          <div class="bar-col"><div class="bar-rect" style="height:85%;"></div><div class="bar-lbl">9A</div></div>
+          <div class="bar-col"><div class="bar-rect" style="height:100%;"></div><div class="bar-lbl">10A</div></div>
+          <div class="bar-col"><div class="bar-rect" style="height:78%;"></div><div class="bar-lbl">11A</div></div>
+          <div class="bar-col"><div class="bar-rect" style="height:55%;"></div><div class="bar-lbl">12P</div></div>
+          <div class="bar-col"><div class="bar-rect" style="height:40%; opacity:0.4;"></div><div class="bar-lbl">1P</div></div>
+        </div>
+        <div class="donut-wrap" style="border-top:1px solid #f5f0ea;">
+          <div class="donut"></div>
+          <div style="flex:1;">
+            <div class="legend-item"><div class="legend-dot" style="background:var(--mint);"></div><span style="font-size:12px; color:#888;">Served</span><span class="legend-num">99</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--amber);"></div><span style="font-size:12px; color:#888;">Preparing</span><span class="legend-num">22</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--rose);"></div><span style="font-size:12px; color:#888;">Cancelled</span><span class="legend-num">7</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Suppliers</h3><span class="view-all">View all →</span></div>
+        <table class="data-table">
+          <tbody>
+            <tr><td><div class="item-name">Sagay Roasters Co.</div><div class="item-sub">Coffee Beans · Specialty</div></td><td style="text-align:right;"><span class="tag tag-active">Active</span></td></tr>
+            <tr><td><div class="item-name">Negros Dairy Farms</div><div class="item-sub">Milk · Cream</div></td><td style="text-align:right;"><span class="tag tag-active">Active</span></td></tr>
+            <tr><td><div class="item-name">Sweet Leaf Syrups</div><div class="item-sub">Syrups · Sauces</div></td><td style="text-align:right;"><span class="tag tag-pending">Pending</span></td></tr>
+            <tr><td><div class="item-name">Bayanihan Bakery</div><div class="item-sub">Pastries · Bread</div></td><td style="text-align:right;"><span class="tag tag-active">Active</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</main>
+<script src="app.js"></script>
+<script>mountLayout({ active: 'dashboard', title: 'Dashboard', cta: 'New Order' });</script>
+</body>
+</html>

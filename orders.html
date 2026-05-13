@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orders – Brewer's Cafe IMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="sidebar-mount"></div>
+<main class="main">
+  <div id="topbar-mount"></div>
+  <div class="content">
+
+    <div class="metrics-row">
+      <div class="metric-card"><div class="metric-label">Total Orders Today</div><div class="metric-value">148</div><div class="metric-sub"><span class="badge-up">↑ 12%</span> vs yesterday</div></div>
+      <div class="metric-card"><div class="metric-label">In Queue</div><div class="metric-value">12</div><div class="metric-sub">3 new · 9 preparing</div></div>
+      <div class="metric-card"><div class="metric-label">Avg. Prep Time</div><div class="metric-value">4.2m</div><div class="metric-sub"><span class="badge-up">↓ 0.6m</span> faster</div></div>
+      <div class="metric-card"><div class="metric-label">Cancelled</div><div class="metric-value">7</div><div class="metric-sub">4.7% of total</div></div>
+    </div>
+
+    <div class="panel grid-1">
+      <div class="panel-head">
+        <h3>All Orders</h3>
+        <div class="tab-row"><div class="tab active">All</div><div class="tab">New</div><div class="tab">Preparing</div><div class="tab">Served</div><div class="tab">Cancelled</div></div>
+        <button class="btn btn-ghost">Export</button>
+      </div>
+      <table class="data-table">
+        <thead><tr><th>Order ID</th><th>Item</th><th>Customer</th><th>Barista</th><th>Time</th><th>Status</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr><td><div class="order-id">#ORD-0148</div></td><td><div class="item-name">Caramel Macchiato</div><div class="item-sub">Oat milk · Large</div></td><td>Maria S.</td><td style="color:#aaa;">Julia D.</td><td style="color:#aaa;">11:02 AM</td><td><span class="status-pill status-prep"><span class="dot"></span>Preparing</span></td><td style="font-weight:600;">₱185</td></tr>
+          <tr><td><div class="order-id">#ORD-0147</div></td><td><div class="item-name">Cold Brew + Muffin</div><div class="item-sub">Blueberry · Set</div></td><td>Walk-in</td><td style="color:#aaa;">Mark L.</td><td style="color:#aaa;">10:54 AM</td><td><span class="status-pill status-done"><span class="dot"></span>Served</span></td><td style="font-weight:600;">₱230</td></tr>
+          <tr><td><div class="order-id">#ORD-0146</div></td><td><div class="item-name">Matcha Latte</div><div class="item-sub">Whole milk · Medium</div></td><td>Ana C.</td><td style="color:#aaa;">Rich M.</td><td style="color:#aaa;">10:40 AM</td><td><span class="status-pill status-cancel"><span class="dot"></span>Cancelled</span></td><td style="font-weight:600; color:#bbb;">₱155</td></tr>
+          <tr><td><div class="order-id">#ORD-0145</div></td><td><div class="item-name">Espresso Shot ×2</div><div class="item-sub">Black · Double</div></td><td>Walk-in</td><td style="color:#aaa;">Nikky S.</td><td style="color:#aaa;">10:32 AM</td><td><span class="status-pill status-done"><span class="dot"></span>Served</span></td><td style="font-weight:600;">₱110</td></tr>
+          <tr><td><div class="order-id">#ORD-0144</div></td><td><div class="item-name">Iced Americano</div><div class="item-sub">No sugar · Large</div></td><td>Jose R.</td><td style="color:#aaa;">Arlo A.</td><td style="color:#aaa;">10:25 AM</td><td><span class="status-pill status-new"><span class="dot"></span>New</span></td><td style="font-weight:600;">₱145</td></tr>
+          <tr><td><div class="order-id">#ORD-0143</div></td><td><div class="item-name">Spanish Latte</div><div class="item-sub">Hot · Medium</div></td><td>Liza P.</td><td style="color:#aaa;">Julia D.</td><td style="color:#aaa;">10:18 AM</td><td><span class="status-pill status-done"><span class="dot"></span>Served</span></td><td style="font-weight:600;">₱165</td></tr>
+          <tr><td><div class="order-id">#ORD-0142</div></td><td><div class="item-name">Croissant + Mocha</div><div class="item-sub">Set · Hot</div></td><td>Walk-in</td><td style="color:#aaa;">Mark L.</td><td style="color:#aaa;">10:10 AM</td><td><span class="status-pill status-done"><span class="dot"></span>Served</span></td><td style="font-weight:600;">₱245</td></tr>
+          <tr><td><div class="order-id">#ORD-0141</div></td><td><div class="item-name">Vanilla Frappe</div><div class="item-sub">Cold · Large</div></td><td>Karen T.</td><td style="color:#aaa;">Rich M.</td><td style="color:#aaa;">9:55 AM</td><td><span class="status-pill status-prep"><span class="dot"></span>Preparing</span></td><td style="font-weight:600;">₱195</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</main>
+<script src="app.js"></script>
+<script>mountLayout({ active: 'orders', title: 'Orders', cta: 'New Order' });</script>
+</body>
+</html>

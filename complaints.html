@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaints – Brewer's Cafe IMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="sidebar-mount"></div>
+<main class="main">
+  <div id="topbar-mount"></div>
+  <div class="content">
+
+    <div class="metrics-row">
+      <div class="metric-card"><div class="metric-label">Open</div><div class="metric-value">5</div><div class="metric-sub">2 high priority</div></div>
+      <div class="metric-card"><div class="metric-label">Resolved Today</div><div class="metric-value">11</div><div class="metric-sub"><span class="badge-up">↑ 4</span> vs yesterday</div></div>
+      <div class="metric-card"><div class="metric-label">Avg. Resolve Time</div><div class="metric-value">3.2h</div><div class="metric-sub">Target: < 24h</div></div>
+      <div class="metric-card"><div class="metric-label">Satisfaction</div><div class="metric-value">4.6★</div><div class="metric-sub">Post-resolution</div></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Open Complaints</h3>
+          <div class="tab-row"><div class="tab active">All</div><div class="tab">High</div><div class="tab">Medium</div><div class="tab">Low</div></div>
+        </div>
+        <div class="complaint-list">
+          <div class="complaint-item"><div class="complaint-top"><span class="complaint-customer">Maria Santos</span><span class="complaint-time">10:42 AM</span></div><div class="complaint-text">Ordered oat milk latte but received whole milk. Allergic to dairy — requested immediate remake.</div><div class="complaint-footer"><span class="priority-tag p-high">HIGH</span><button class="resolve-btn">Mark Resolved →</button></div></div>
+          <div class="complaint-item"><div class="complaint-top"><span class="complaint-customer">Jose Reyes</span><span class="complaint-time">9:15 AM</span></div><div class="complaint-text">Cold brew was not cold enough; ice melted before reaching the table.</div><div class="complaint-footer"><span class="priority-tag p-med">MEDIUM</span><button class="resolve-btn">Mark Resolved →</button></div></div>
+          <div class="complaint-item"><div class="complaint-top"><span class="complaint-customer">Ana Cruz</span><span class="complaint-time">8:30 AM</span></div><div class="complaint-text">Matcha latte unavailable after ordering — no prior notification on menu.</div><div class="complaint-footer"><span class="priority-tag p-low">LOW</span><button class="resolve-btn">Mark Resolved →</button></div></div>
+          <div class="complaint-item"><div class="complaint-top"><span class="complaint-customer">Karen Tan</span><span class="complaint-time">Yesterday</span></div><div class="complaint-text">Receipt missing items; charged for 3 drinks but only 2 served.</div><div class="complaint-footer"><span class="priority-tag p-high">HIGH</span><button class="resolve-btn">Mark Resolved →</button></div></div>
+          <div class="complaint-item"><div class="complaint-top"><span class="complaint-customer">Liza Park</span><span class="complaint-time">Yesterday</span></div><div class="complaint-text">Wi-Fi was slow; couldn't complete remote work session.</div><div class="complaint-footer"><span class="priority-tag p-low">LOW</span><button class="resolve-btn">Mark Resolved →</button></div></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Recently Resolved</h3></div>
+        <table class="data-table">
+          <thead><tr><th>Customer</th><th>Issue</th><th>Resolved In</th></tr></thead>
+          <tbody>
+            <tr><td>John D.</td><td>Wrong order delivered</td><td style="color:var(--mint);">42 min</td></tr>
+            <tr><td>Mae L.</td><td>Spilled drink</td><td style="color:var(--mint);">8 min</td></tr>
+            <tr><td>Ben K.</td><td>Bitter espresso</td><td style="color:var(--mint);">15 min</td></tr>
+            <tr><td>Pia C.</td><td>Long wait time</td><td style="color:var(--amber);">1.2 hrs</td></tr>
+            <tr><td>Rafa M.</td><td>Overcharged</td><td style="color:var(--mint);">22 min</td></tr>
+            <tr><td>Tina V.</td><td>Stale pastry</td><td style="color:var(--mint);">10 min</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</main>
+<script src="app.js"></script>
+<script>mountLayout({ active: 'complaints', title: 'Complaints', cta: 'New Ticket' });</script>
+</body>
+</html>

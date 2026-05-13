@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suppliers – Brewer's Cafe IMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="sidebar-mount"></div>
+<main class="main">
+  <div id="topbar-mount"></div>
+  <div class="content">
+
+    <div class="metrics-row">
+      <div class="metric-card"><div class="metric-label">Active Suppliers</div><div class="metric-value">12</div><div class="metric-sub">2 pending review</div></div>
+      <div class="metric-card"><div class="metric-label">Open POs</div><div class="metric-value">5</div><div class="metric-sub">₱48,200 pending</div></div>
+      <div class="metric-card"><div class="metric-label">On-Time Delivery</div><div class="metric-value">94%</div><div class="metric-sub"><span class="badge-up">↑ 3%</span> last month</div></div>
+      <div class="metric-card"><div class="metric-label">Avg. Lead Time</div><div class="metric-value">2.4d</div><div class="metric-sub">From order to receipt</div></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>All Suppliers</h3>
+        <div class="tab-row"><div class="tab active">All</div><div class="tab">Active</div><div class="tab">Pending</div><div class="tab">Inactive</div></div>
+        <button class="btn btn-ghost">Filter</button>
+      </div>
+      <table class="data-table">
+        <thead><tr><th>Supplier</th><th>Category</th><th>Contact</th><th>Lead Time</th><th>Last Order</th><th>Rating</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><div class="item-name">Sagay Roasters Co.</div><div class="item-sub">SUP-001</div></td><td>Coffee Beans</td><td style="color:#aaa;">+63 917 555 1102</td><td>2 days</td><td style="color:#aaa;">May 10, 2026</td><td>★ 4.9</td><td><span class="tag tag-active">Active</span></td></tr>
+          <tr><td><div class="item-name">Negros Dairy Farms</div><div class="item-sub">SUP-002</div></td><td>Milk · Cream</td><td style="color:#aaa;">+63 917 555 2018</td><td>1 day</td><td style="color:#aaa;">May 12, 2026</td><td>★ 4.7</td><td><span class="tag tag-active">Active</span></td></tr>
+          <tr><td><div class="item-name">Sweet Leaf Syrups</div><div class="item-sub">SUP-003</div></td><td>Syrups · Sauces</td><td style="color:#aaa;">+63 917 555 3344</td><td>4 days</td><td style="color:#aaa;">May 5, 2026</td><td>★ 4.2</td><td><span class="tag tag-pending">Pending</span></td></tr>
+          <tr><td><div class="item-name">Bayanihan Bakery</div><div class="item-sub">SUP-004</div></td><td>Pastries · Bread</td><td style="color:#aaa;">+63 917 555 4490</td><td>1 day</td><td style="color:#aaa;">May 13, 2026</td><td>★ 4.8</td><td><span class="tag tag-active">Active</span></td></tr>
+          <tr><td><div class="item-name">Cebu Tea Imports</div><div class="item-sub">SUP-005</div></td><td>Tea · Matcha</td><td style="color:#aaa;">+63 917 555 5571</td><td>5 days</td><td style="color:#aaa;">Apr 28, 2026</td><td>★ 4.5</td><td><span class="tag tag-active">Active</span></td></tr>
+          <tr><td><div class="item-name">Iloilo Packaging</div><div class="item-sub">SUP-006</div></td><td>Cups · Lids</td><td style="color:#aaa;">+63 917 555 6603</td><td>3 days</td><td style="color:#aaa;">May 7, 2026</td><td>★ 4.1</td><td><span class="tag tag-active">Active</span></td></tr>
+          <tr><td><div class="item-name">Old Vendor Co.</div><div class="item-sub">SUP-007</div></td><td>Misc</td><td style="color:#aaa;">—</td><td>—</td><td style="color:#aaa;">Jan 02, 2026</td><td>★ 3.2</td><td><span class="tag tag-inactive">Inactive</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</main>
+<script src="app.js"></script>
+<script>mountLayout({ active: 'suppliers', title: 'Suppliers', cta: 'New Supplier' });</script>
+</body>
+</html>

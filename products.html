@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products / Menu – Brewer's Cafe IMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="sidebar-mount"></div>
+<main class="main">
+  <div id="topbar-mount"></div>
+  <div class="content">
+
+    <div class="metrics-row">
+      <div class="metric-card"><div class="metric-label">Menu Items</div><div class="metric-value">38</div><div class="metric-sub">6 categories</div></div>
+      <div class="metric-card"><div class="metric-label">Available</div><div class="metric-value">35</div><div class="metric-sub">3 out of stock</div></div>
+      <div class="metric-card"><div class="metric-label">Top Seller</div><div class="metric-value" style="font-size:20px;">Caramel Macchiato</div><div class="metric-sub">42 sold today</div></div>
+      <div class="metric-card"><div class="metric-label">Avg. Price</div><div class="metric-value">₱168</div><div class="metric-sub">Across menu</div></div>
+    </div>
+
+    <div class="panel" style="margin-bottom:20px;">
+      <div class="panel-head">
+        <h3>Menu</h3>
+        <div class="tab-row"><div class="tab active">All</div><div class="tab">Coffee</div><div class="tab">Tea</div><div class="tab">Cold</div><div class="tab">Pastry</div><div class="tab">Set</div></div>
+      </div>
+      <div class="panel-body">
+        <div class="product-grid">
+          <div class="product-card"><div class="product-img">☕</div><div class="product-body"><div class="product-name">Caramel Macchiato</div><div class="product-cat">Coffee · Hot</div><div class="product-foot"><span class="product-price">₱185</span><span class="tag tag-active">Available</span></div></div></div>
+          <div class="product-card"><div class="product-img">🧋</div><div class="product-body"><div class="product-name">Cold Brew</div><div class="product-cat">Coffee · Cold</div><div class="product-foot"><span class="product-price">₱160</span><span class="tag tag-active">Available</span></div></div></div>
+          <div class="product-card"><div class="product-img">🍵</div><div class="product-body"><div class="product-name">Matcha Latte</div><div class="product-cat">Tea · Hot/Cold</div><div class="product-foot"><span class="product-price">₱155</span><span class="tag tag-pending">Low Stock</span></div></div></div>
+          <div class="product-card"><div class="product-img">☕</div><div class="product-body"><div class="product-name">Espresso Shot</div><div class="product-cat">Coffee · Hot</div><div class="product-foot"><span class="product-price">₱55</span><span class="tag tag-active">Available</span></div></div></div>
+          <div class="product-card"><div class="product-img">🥤</div><div class="product-body"><div class="product-name">Iced Americano</div><div class="product-cat">Coffee · Cold</div><div class="product-foot"><span class="product-price">₱145</span><span class="tag tag-active">Available</span></div></div></div>
+          <div class="product-card"><div class="product-img">🍰</div><div class="product-body"><div class="product-name">Spanish Latte</div><div class="product-cat">Coffee · Hot</div><div class="product-foot"><span class="product-price">₱165</span><span class="tag tag-active">Available</span></div></div></div>
+          <div class="product-card"><div class="product-img">🥐</div><div class="product-body"><div class="product-name">Butter Croissant</div><div class="product-cat">Pastry</div><div class="product-foot"><span class="product-price">₱85</span><span class="tag tag-active">Available</span></div></div></div>
+          <div class="product-card"><div class="product-img">🧁</div><div class="product-body"><div class="product-name">Blueberry Muffin</div><div class="product-cat">Pastry</div><div class="product-foot"><span class="product-price">₱95</span><span class="tag tag-active">Available</span></div></div></div>
+          <div class="product-card"><div class="product-img">🍮</div><div class="product-body"><div class="product-name">Vanilla Frappe</div><div class="product-cat">Coffee · Cold</div><div class="product-foot"><span class="product-price">₱195</span><span class="tag tag-active">Available</span></div></div></div>
+          <div class="product-card"><div class="product-img">🍫</div><div class="product-body"><div class="product-name">Mocha Special</div><div class="product-cat">Coffee · Hot</div><div class="product-foot"><span class="product-price">₱175</span><span class="tag tag-inactive">Out</span></div></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+<script src="app.js"></script>
+<script>mountLayout({ active: 'products', title: 'Products / Menu', cta: 'Add Product' });</script>
+</body>
+</html>

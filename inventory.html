@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory – Brewer's Cafe IMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="sidebar-mount"></div>
+<main class="main">
+  <div id="topbar-mount"></div>
+  <div class="content">
+
+    <div class="metrics-row">
+      <div class="metric-card"><div class="metric-label">Total SKUs</div><div class="metric-value">42</div><div class="metric-sub">Tracked items</div></div>
+      <div class="metric-card"><div class="metric-label">Stock Value</div><div class="metric-value">₱82,450</div><div class="metric-sub">On-hand</div></div>
+      <div class="metric-card"><div class="metric-label">Low Stock</div><div class="metric-value">3</div><div class="metric-sub"><span class="badge-down">↑ 2</span> from yesterday</div></div>
+      <div class="metric-card"><div class="metric-label">Critical</div><div class="metric-value">1</div><div class="metric-sub">Reorder now</div></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Ingredient Inventory</h3>
+        <div class="tab-row"><div class="tab active">All</div><div class="tab">Low</div><div class="tab">Critical</div></div>
+        <button class="btn btn-ghost">Restock</button>
+      </div>
+      <table class="data-table">
+        <thead><tr><th>Item</th><th>Category</th><th>Supplier</th><th>On Hand</th><th>Reorder Lvl</th><th>Status</th><th>Last Updated</th></tr></thead>
+        <tbody>
+          <tr><td><div class="item-name">☕ Arabica Coffee Beans</div><div class="item-sub">SKU-001</div></td><td>Coffee</td><td style="color:#aaa;">Sagay Roasters</td><td>3.2 kg</td><td>1.0 kg</td><td><span class="stock-alert alert-ok">OK</span></td><td style="color:#aaa;">10 min ago</td></tr>
+          <tr><td><div class="item-name">🥛 Whole Milk</div><div class="item-sub">SKU-002</div></td><td>Dairy</td><td style="color:#aaa;">Negros Dairy</td><td>4.8 L</td><td>2.0 L</td><td><span class="stock-alert alert-ok">OK</span></td><td style="color:#aaa;">25 min ago</td></tr>
+          <tr><td><div class="item-name">🌾 Oat Milk</div><div class="item-sub">SKU-003</div></td><td>Dairy Alt</td><td style="color:#aaa;">Negros Dairy</td><td>0.9 L</td><td>1.5 L</td><td><span class="stock-alert alert-warn">Low</span></td><td style="color:#aaa;">8 min ago</td></tr>
+          <tr><td><div class="item-name">🍵 Matcha Powder</div><div class="item-sub">SKU-004</div></td><td>Tea</td><td style="color:#aaa;">Sweet Leaf</td><td>120 g</td><td>500 g</td><td><span class="stock-alert alert-low">Critical</span></td><td style="color:#aaa;">2 min ago</td></tr>
+          <tr><td><div class="item-name">🍯 Caramel Syrup</div><div class="item-sub">SKU-005</div></td><td>Syrup</td><td style="color:#aaa;">Sweet Leaf</td><td>1.2 L</td><td>2.0 L</td><td><span class="stock-alert alert-warn">Low</span></td><td style="color:#aaa;">1 hr ago</td></tr>
+          <tr><td><div class="item-name">🍫 Chocolate Sauce</div><div class="item-sub">SKU-006</div></td><td>Syrup</td><td style="color:#aaa;">Sweet Leaf</td><td>2.4 L</td><td>1.0 L</td><td><span class="stock-alert alert-ok">OK</span></td><td style="color:#aaa;">3 hr ago</td></tr>
+          <tr><td><div class="item-name">🧊 Ice Cubes</div><div class="item-sub">SKU-007</div></td><td>Misc</td><td style="color:#aaa;">In-house</td><td>20 kg</td><td>5 kg</td><td><span class="stock-alert alert-ok">OK</span></td><td style="color:#aaa;">5 hr ago</td></tr>
+          <tr><td><div class="item-name">🥐 Croissants</div><div class="item-sub">SKU-008</div></td><td>Pastry</td><td style="color:#aaa;">Bayanihan Bakery</td><td>14 pcs</td><td>10 pcs</td><td><span class="stock-alert alert-ok">OK</span></td><td style="color:#aaa;">6 hr ago</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</main>
+<script src="app.js"></script>
+<script>mountLayout({ active: 'inventory', title: 'Inventory', cta: 'Add Item' });</script>
+</body>
+</html>
